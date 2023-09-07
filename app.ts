@@ -9,10 +9,12 @@ app.get('/api', (req:express.Request, res:express.Response) => {
     const gitHubFileUrl = 'https://github.com/boluwatife010/Hackerank-solutions/blob/main/dayOfProgrammer.js';
     const gitHubRepoUrl = 'https://github.com/boluwatife010/Hackerank-solutions';
     const responseData = {
-        "slack_name": slackName,
+        "query1": slackName,
+        "query2": slackTrack,
+        "slack_name": "Boluwatife0001",
         "current_day": currentDay,
         "utc_time": currentTime,
-        "track": slackTrack,
+        "track": "backend",
         "github_file_url": gitHubFileUrl,
         "github_repo_url": gitHubRepoUrl,
         "status_code": 200
