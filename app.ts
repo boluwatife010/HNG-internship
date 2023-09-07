@@ -5,7 +5,7 @@ app.use(bodyParser.json());
 app.get('/api', (req:express.Request, res:express.Response) => {
     const {slackName, slackTrack} = req.query;
     const currentDay = new Date().toLocaleString('en-US', {weekday: 'long'});
-    const currentTime = new Date().toISOString();
+    const currentTime = new Date().toISOString().slice(0, -5) + 'Z';
     const gitHubFileUrl = 'https://github.com/boluwatife010/Hackerank-solutions/blob/main/dayOfProgrammer.js';
     const gitHubRepoUrl = 'https://github.com/boluwatife010/Hackerank-solutions';
     const responseData = {
